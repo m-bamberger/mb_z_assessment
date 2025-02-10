@@ -16,7 +16,14 @@ that you have to produce additional product, when your stock is negative.
  productController only passthrough the data to the repository. 
 
 - First i addes the solution in Azure DevOps and added a build and test pipline.
+I testted the released application on my IIS-Server (with multiple instances).
 For sharing with you its easier with permissions in Github instead of Azure DevOps.
+
+- Possible (not implemented) extensions:
+  - Authentication with API-Key oder with login and token
+  - lLgging to elastic search 
+  - Caching for faster data access and to reduce the load on the database
+  - When the muliple instances of the application dont share the same db: Extra service/application for the id generation.
 
 
 ## Overview
@@ -142,6 +149,7 @@ dotnet tool install --global dotnet-ef
 dotnet ef database update
 ```
 
+Note: I my tests i faced the problem twice that the build wasn't possible. Restart of Visual Studio and clean the solution helped me out. 
 
 ## Azure DevOps Buildpipeline
 
