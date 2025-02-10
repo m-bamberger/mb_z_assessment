@@ -3,22 +3,20 @@
 ## Implementation Informations
 - As we wrote in the email, I assumed that several instances of the application (possibly on several servers) 
 share the same database.
+
 - For the decrement-stock and addstock i decieded to allow negative stocks too, because in an production envirnoment it could mean, 
 that you have to produce additional product, when your stock is negative.
-- I decided to create the ProductService between the conroller and the repository, because i don't wanted the calculation
- for the add-stock and decrease-stock endpoints,
- directly in the controller. Withiout them i could use the repository directly in the controller.
-- For logging i decided to just log the exceptions and not every successfull call of the api.
 
-- For the Unit-Test is only covered the most important methods (ProductRepository) because the productService and the
- productController mostly passthrough the data to the repository. 
+- I decided to create the ProductService between the conroller and the repository, because i don't wanted the calculation
+ for the add-stock and decrease-stock endpoints, directly in the controller. Without them i could inject and use the repository directly in the controller.
+
+- The logger currently logs only to the console. It could be extendet that the application logs to ElasticSearch.
+
+- For the Unit-Test is only covered the most important methods (in the ProductRepository) because the productService and the
+ productController only passthrough the data to the repository. 
 
 - First i addes the solution in Azure DevOps and added a build and test pipline.
-For sharing with you its easier with permissions in Github instead of Azure DevOps. 
-So the part of the buildpipline is not relevant.
-
- 
- 
+For sharing with you its easier with permissions in Github instead of Azure DevOps.
 
 
 ## Overview
