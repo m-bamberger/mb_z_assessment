@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ZeissAssessment\ZeissAssessment.API.csproj" />
+    <ProjectReference Include="..\ZeissAssessment.API\ZeissAssessment.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>
